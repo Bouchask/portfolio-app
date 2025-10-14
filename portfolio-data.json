@@ -1,0 +1,129 @@
+{
+  "name": "Yahya Bouchak",
+  "title": "AI & Big Data Developer",
+  "image": "profil.jpeg",
+  "about": "Driven by a mission to bridge the gap between complex data and real-world solutions, I thrive on transforming challenging problems into elegant and intelligent systems. My passion lies not just in coding, but in architecting AI-powered tools that deliver tangible impact and measurable results.",
+  "socials": {
+    "portfolio": "https://bouchak-yahya.vercel.app",
+    "email": "mailto:mr.bouchakyahya@gmail.com",
+    "linkedin": "https://linkedin.com/in/yahyabouchak",
+    "github": "https://github.com/Bouchask"
+  },
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "technologies": ["C", "Java", "Python", "JavaScript", "PHP"]
+    },
+    {
+      "category": "Web Development",
+      "technologies": ["HTML5", "CSS3", "React", "Node.js", "Laravel", "Tailwind CSS"]
+    },
+    {
+      "category": "AI & Data Science",
+      "technologies": ["TensorFlow", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Streamlit", "Plotly"]
+    },
+    {
+        "category": "Pre-trained Models",
+        "technologies": ["GPT-2", "RoBERTa", "Google Models"]
+    },
+    {
+      "category": "Computer Vision",
+      "technologies": ["OpenCV", "MediaPipe", "InsightFace", "DeepFace", "HDBSCAN"]
+    },
+    {
+      "category": "Databases",
+      "technologies": ["MySQL", "PostgreSQL", "NoSQL", "SQLite"]
+    },
+    {
+        "category": "Big Data & Data Engineering",
+        "technologies": ["Spark", "Flume"]
+    },
+    {
+      "category": "Tools & APIs",
+      "technologies": ["Git", "Docker", "YouTube Data API", "Google API", "UML", "Merise"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "AI-Powered Attendance Tracking Portal",
+      "description": "Engineered an AI-powered portal for automated attendance tracking, using YOLOv8 for detection and ArcFace for high-accuracy recognition. The system is designed to streamline administrative tasks and improve record-keeping integrity.",
+      "technologies": ["Python", "Flask", "YOLOv8", "ArcFace", "FAISS"],
+      "repository": "https://github.com/Bouchask/Portail_IA"
+    },
+    {
+      "title": "NASDAQ 100 Stock Price Prediction",
+      "description": "Developed a time-series forecasting model for the NASDAQ 100 index, leveraging TensorFlow to predict market movements. The goal was to build a tool for back-testing and validating potential trading strategies based on historical data patterns.",
+      "technologies": ["Python", "TensorFlow", "Streamlit", "yfinance"],
+      "repository": "https://github.com/Bouchask/prediction_nasdaq"
+    },
+    {
+      "title": "Smart Finger & Emotion Detection",
+      "description": "Created a real-time human-computer interaction system using MediaPipe and DeepFace. The application interprets hand gestures and facial expressions, opening possibilities for intuitive, non-verbal software control and user state analysis.",
+      "technologies": ["Python", "DeepFace", "MediaPipe", "OpenCV"],
+      "repository": "https://github.com/Bouchask/..."
+    },
+    {
+      "title": "Face Detection & Clustering",
+      "description": "Implemented an unsupervised pipeline for face clustering in media. By combining InsightFace for feature extraction and HDBSCAN for density-based clustering, this project automatically identifies and groups individuals without prior labeling.",
+      "technologies": ["Python", "OpenCV", "InsightFace", "HDBSCAN"],
+      "repository": "https://github.com/Bouchask/..."
+    },
+    {
+        "title": "NLP Sentiment Analysis",
+        "description": "Built a sentiment analysis tool using a fine-tuned DistilRoBERTa model deployed via Streamlit. The application provides instant emotional tone analysis of text, demonstrating the power of modern NLP for user feedback and social media monitoring.",
+        "technologies": ["Python", "DistilRoBERTa", "Streamlit"],
+        "repository": "https://github.com/Bouchask/..."
+    }
+  ],
+  "resources": [
+    {
+      "name": "Kaggle",
+      "description": "An online community of data scientists and machine learning practitioners. Excellent for datasets, notebooks, and competitions.",
+      "logo": "kaggle.svg"
+    },
+    {
+      "name": "Hugging Face",
+      "description": "The go-to platform for pre-trained models and tools for natural language processing.",
+      "logo": "huggingface.svg"
+    },
+    {
+      "name": "Medium (Towards Data Science)",
+      "description": "A publication with high-quality articles and tutorials on data science, machine learning, and AI.",
+      "logo": "medium.svg"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master's in Information Systems & Artificial Intelligence",
+      "institution": "Faculté Polydisciplinaire Khouribga (FPK)",
+      "duration": "2025 - Present"
+    },
+    {
+      "degree": "Bachelor's in Information Systems & Artificial Intelligence",
+      "institution": "Faculté Polydisciplinaire Khouribga (FPK)",
+      "duration": "2024 - 2025"
+    },
+    {
+      "degree": "Higher Technician's Certificate (BTS) in Information Systems Development",
+      "institution": "Lycée Technique Qualifiant",
+      "duration": "2022 - 2024"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Full Stack Developer Intern",
+      "company": "Tech Solutions Inc.",
+      "duration": "Summer 2023",
+      "responsibilities": [
+        "Developed and maintained web applications using Laravel and React.",
+        "Collaborated with the AI team to integrate a recommendation engine.",
+        "Participated in the full software development lifecycle, from planning to deployment."
+      ]
+    }
+  ],
+  "contact": {
+    "email": "mr.bouchakyahya@gmail.com",
+    "phone": "+212-663-742-975",
+    "portfolio": "bouchak-yahya.vercel.app"
+  }
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahya Bouchak - AI & Big Data Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #111827;
+            color: #E5E7EB;
+        }
+        .section-divider {
+            border-color: #374151;
+        }
+        .card {
+            border: 1px solid #E5E7EB;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            border-color: #3B82F6;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        .btn {
+            display: inline-block;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #3B82F6;
+            color: #FFFFFF;
+            border-color: #3B82F6;
+        }
+        .btn-primary:hover {
+            background-color: #111827;
+            color: #3B82F6;
+        }
+        .profile-image-container {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+        }
+        .profile-image {
+            border-radius: 50%;
+            border: 2px solid #3B82F6;
+            transition: box-shadow 0.3s ease;
+        }
+        .profile-image-container:hover .profile-image {
+            box-shadow: 0 0 20px #3B82F6, 0 0 30px #3B82F6;
+        }
+        #phone-copy-widget {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="main-header" class="bg-gray-900/50 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div id="logo" class="text-2xl font-bold text-blue-500">YB</div>
+            <!-- Desktop Nav -->
+            <ul id="nav-links" class="hidden md:flex space-x-8">
+                <!-- Links will be injected here -->
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <ul id="mobile-nav-links" class="px-6 pb-4 space-y-4">
+                <!-- Mobile links will be injected here -->
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24 md:pt-32">
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-12 md:py-20">
+            <!-- Content will be injected here -->
+        </section>
+
+        <hr class="section-divider my-12">
+
+        <!-- About Me -->
+        <section id="about" class="py-12">
+            <!-- Content will be injected here -->
+        </section>
+
+        <hr class="section-divider my-12">
+
+        <!-- Technical Skills -->
+        <section id="skills" class="py-12">
+            <!-- Content will be injected here -->
+        </section>
+
+        <hr class="section-divider my-12">
+
+        <!-- Projects -->
+        <section id="projects" class="py-12">
+            <!-- Content will be injected here -->
+        </section>
+
+        <hr class="section-divider my-12">
+
+        <!-- My Go-To Resources -->
+        <section id="resources" class="py-12">
+            <!-- Content will be injected here -->
+        </section>
+
+        <hr class="section-divider my-12">
+
+        <!-- Experience & Education -->
+        <section id="experience-education" class="py-12">
+            <!-- Content will be injected here -->
+        </section>
+        
+        <hr class="section-divider my-12">
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="text-center py-12">
+        <!-- Content will be injected here -->
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            fetch('portfolio-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    populateNavLinks();
+                    populateHero(data.name, data.title, data.socials, data.image);
+                    populateAbout(data.about);
+                    populateSkills(data.skills);
+                    populateProjects(data.projects);
+                    populateResources(data.resources);
+                    populateExperienceAndEducation(data.experience, data.education);
+                    populateContact(data.contact);
+                })
+                .catch(error => console.error('Error fetching portfolio data:', error));
+        });
+
+        function populateNavLinks() {
+            const links = [
+                { name: 'About', href: '#about' },
+                { name: 'Skills', href: '#skills' },
+                { name: 'Projects', href: '#projects' },
+                { name: 'Resources', href: '#resources' },
+                { name: 'Experience', href: '#experience-education' },
+                { name: 'Contact', href: '#contact' }
+            ];
+            const navLinksContainer = document.getElementById('nav-links');
+            const mobileNavLinksContainer = document.getElementById('mobile-nav-links');
+            
+            const linkHTML = links.map(link => `<li><a href="${link.href}" class="hover:text-blue-400 transition-colors">${link.name}</a></li>`).join('');
+            navLinksContainer.innerHTML = linkHTML;
+            mobileNavLinksContainer.innerHTML = linkHTML;
+        }
+
+        function populateHero(name, title, socials, image) {
+            const heroSection = document.getElementById('hero');
+            heroSection.innerHTML = `
+                <div class="flex flex-col items-center">
+                    <div class="profile-image-container mb-6">
+                        <img src="${image}" alt="Profile Picture" class="profile-image w-full h-full object-cover">
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-3">${name}</h1>
+                    <p class="text-xl md:text-2xl text-blue-400 mb-8">${title}</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="${socials.github}" target="_blank" class="btn btn-primary px-6 py-2">GitHub</a>
+                        <a href="${socials.linkedin}" target="_blank" class="btn btn-primary px-6 py-2">LinkedIn</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function populateAbout(about) {
+            const aboutSection = document.getElementById('about');
+            aboutSection.innerHTML = `
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">About Me</h2>
+                <p class="max-w-3xl mx-auto text-base md:text-lg text-center leading-relaxed">${about}</p>
+            `;
+        }
+
+        function populateSkills(skills) {
+            const skillsSection = document.getElementById('skills');
+            skillsSection.innerHTML = `
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Technical Skills</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    ${skills.map(skillCategory => `
+                        <div class="card bg-gray-800/50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-blue-400 mb-4">${skillCategory.category}</h3>
+                            <div class="flex flex-wrap gap-2">
+                                ${skillCategory.technologies.map(tech => `<span class="bg-gray-700 px-3 py-1 text-sm rounded-md">${tech}</span>`).join('')}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function populateProjects(projects) {
+            const projectsSection = document.getElementById('projects');
+            projectsSection.innerHTML = `
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    ${projects.map(project => `
+                        <div class="card bg-gray-800/50 p-6 rounded-lg flex flex-col h-full">
+                            <h3 class="text-lg font-bold mb-2">${project.title}</h3>
+                            <p class="text-gray-400 text-sm flex-grow mb-4">${project.description}</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                ${project.technologies.map(tech => `<span class="bg-gray-700 px-2 py-1 text-xs rounded-md">${tech}</span>`).join('')}
+                            </div>
+                            <a href="${project.repository}" target="_blank" class="btn btn-primary mt-auto self-start px-4 py-2 text-sm">View Repo</a>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function populateResources(resources) {
+            const resourcesSection = document.getElementById('resources');
+            resourcesSection.innerHTML = `
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Mes Ressources Préférées</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    ${resources.map(resource => `
+                        <div class="card bg-gray-800/50 p-6 rounded-lg text-center">
+                            <img src="${resource.logo}" alt="${resource.name} Logo" class="h-16 w-16 mx-auto mb-4 filter grayscale hover:grayscale-0 transition-all duration-300">
+                            <h3 class="text-xl font-bold mb-2">${resource.name}</h3>
+                            <p class="text-gray-400 text-sm">${resource.description}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function populateExperienceAndEducation(experience, education) {
+            const section = document.getElementById('experience-education');
+            section.innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Experience</h2>
+                        <div class="space-y-8">
+                        ${experience.map(exp => `
+                            <div>
+                                <h3 class="text-xl font-bold">${exp.role}</h3>
+                                <p class="text-blue-400 mb-1">${exp.company} | ${exp.duration}</p>
+                                <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                                    ${exp.responsibilities.map(res => `<li>${res}</li>`).join('')}
+                                </ul>
+                            </div>
+                        `).join('')}
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Education</h2>
+                        <div class="space-y-8">
+                        ${education.map(edu => `
+                            <div>
+                                <h3 class="text-xl font-bold">${edu.degree}</h3>
+                                <p class="text-blue-400 mb-1">${edu.institution}</p>
+                                <p class="text-gray-400 text-sm">${edu.duration}</p>
+                            </div>
+                        `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function populateContact(contact) {
+            const contactSection = document.getElementById('contact');
+            const phoneInitialText = "[Cliquer pour copier]";
+            contactSection.innerHTML = `
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Contact</h2>
+                <p class="text-lg mb-3">Email: <a href="mailto:${contact.email}" class="text-blue-400 hover:underline">${contact.email}</a></p>
+                <p id="phone-copy-widget" class="text-lg">
+                    Phone: <span id="phone-text" class="font-bold text-blue-400">${phoneInitialText}</span>
+                </p>
+            `;
+
+            const phoneWidget = document.getElementById('phone-copy-widget');
+            const phoneText = document.getElementById('phone-text');
+
+            phoneWidget.addEventListener('click', () => {
+                navigator.clipboard.writeText(contact.phone).then(() => {
+                    phoneText.innerHTML = "Copié ! ✔️";
+                    phoneText.classList.add('text-green-400');
+                    setTimeout(() => {
+                        phoneText.innerHTML = phoneInitialText;
+                        phoneText.classList.remove('text-green-400');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy phone number: ', err);
+                    phoneText.innerText = "Erreur de copie";
+                    setTimeout(() => {
+                        phoneText.innerText = phoneInitialText;
+                    }, 2000);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
