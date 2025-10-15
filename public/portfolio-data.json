@@ -60,19 +60,19 @@
       "title": "Smart Finger & Emotion Detection",
       "description": "Created a real-time human-computer interaction system using MediaPipe and DeepFace. The application interprets hand gestures and facial expressions, opening possibilities for intuitive, non-verbal software control and user state analysis.",
       "technologies": ["Python", "DeepFace", "MediaPipe", "OpenCV"],
-      "repository": "https://github.com/Bouchask/..."
+      "repository": "https://github.com/Bouchask/detection_face"
     },
     {
       "title": "Face Detection & Clustering",
       "description": "Implemented an unsupervised pipeline for face clustering in media. By combining InsightFace for feature extraction and HDBSCAN for density-based clustering, this project automatically identifies and groups individuals without prior labeling.",
       "technologies": ["Python", "OpenCV", "InsightFace", "HDBSCAN"],
-      "repository": "https://github.com/Bouchask/..."
+      "repository": "https://github.com/Bouchask/D-tection-et-de-Clustering-des-Visages"
     },
     {
         "title": "NLP Sentiment Analysis",
         "description": "Built a sentiment analysis tool using a fine-tuned DistilRoBERTa model deployed via Streamlit. The application provides instant emotional tone analysis of text, demonstrating the power of modern NLP for user feedback and social media monitoring.",
         "technologies": ["Python", "DistilRoBERTa", "Streamlit"],
-        "repository": "https://github.com/Bouchask/..."
+        "repository": "https://github.com/Bouchask/nlp_sentiment_project"
     }
   ],
   "resources": [
@@ -124,6 +124,6 @@
   "contact": {
     "email": "mr.bouchakyahya@gmail.com",
     "phone": "+212-663-742-975",
-    "portfolio": "bouchak-yahya.vercel.app"
+    "portfolio": "https://portfolio-app-delta-eight.vercel.app"
   }
 }
