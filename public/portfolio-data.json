@@ -77,7 +77,13 @@
         "description": "Built a sentiment analysis tool using a fine-tuned DistilRoBERTa model deployed via Streamlit. The application provides instant emotional tone analysis of text, demonstrating the power of modern NLP for user feedback and social media monitoring.",
         "technologies": ["Python", "DistilRoBERTa", "Streamlit"],
         "repository": "https://github.com/Bouchask/nlp_sentiment_project"
-    }
+    },
+    {
+        "title": "Gradient Descent Visualizer",
+        "description": "Developed an interactive tool to visualize various gradient descent and optimization functions in 2D and 3D, providing an intuitive understanding of their behavior.",
+        "technologies": ["Python", "Flask", "NumPy", "Matplotlib", "JavaScript", "HTML", "CSS"],
+        "repository": "https://github.com/Bouchask/gradiant-visuel"
+    } 
   ],
   "resources": [
     {
