@@ -36,11 +36,15 @@
     },
     {
         "category": "Big Data & Data Engineering",
-        "technologies": ["Spark", "Flume"]
+        "technologies": ["Spark", "Flume", "Hadoop", "Hive", "Pig", "Kafka"]
     },
     {
       "category": "Tools & APIs",
       "technologies": ["Git", "Docker", "YouTube Data API", "Google API", "UML", "Merise"]
+    },
+    {
+      "category": "LLM",
+      "technologies": ["GPT-3", "BERT", "T5"]
     }
   ],
   "projects": [
