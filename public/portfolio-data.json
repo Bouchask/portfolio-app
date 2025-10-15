@@ -20,11 +20,11 @@
     },
     {
       "category": "AI & Data Science",
-      "technologies": ["TensorFlow", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Streamlit", "Plotly"]
+      "technologies": ["TensorFlow", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Streamlit", "Plotly", "NLP", "PyTorch"]
     },
     {
         "category": "Pre-trained Models",
-        "technologies": ["GPT-2", "RoBERTa", "Google Models"]
+        "technologies": ["GPT-2", "RoBERTa", "Google Models", "YOLO", "FastAPI"]
     },
     {
       "category": "Computer Vision",
