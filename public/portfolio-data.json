@@ -49,6 +49,12 @@
   ],
   "projects": [
     {
+      "title": "SIEM AI Dashboard",
+      "description": "A real-time SIEM dashboard that analyzes Wazuh alerts using a Large Language Model (LLM) to classify them as 'True Positive' or 'False Positive'.",
+      "technologies": ["Python", "Kafka", "FastAPI", "Ollama", "Flask", "SQLite"],
+      "repository": "https://github.com/Bouchask/siam-stage"
+    },
+    {
       "title": "AI-Powered Attendance Tracking Portal",
       "description": "Engineered an AI-powered portal for automated attendance tracking, using YOLOv8 for detection and ArcFace for high-accuracy recognition. The system is designed to streamline administrative tasks and improve record-keeping integrity.",
       "technologies": ["Python", "Flask", "YOLOv8", "ArcFace", "FAISS"],
